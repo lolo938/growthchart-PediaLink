@@ -1,5 +1,5 @@
-const { useState, useMemo, useEffect } = React;
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Scatter, ComposedChart } from 'recharts';
+const {useState, useMemo, useEffect} = React;
+const { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Scatter, ComposedChart } = Recharts;
 
 const PediatricGrowthMonitoringTool = () => {
   const [childData, setChildData] = useState({
@@ -833,9 +833,6 @@ const PediatricGrowthMonitoringTool = () => {
   );
 };
 
-// export default (removed for browser build) PediatricGrowthMonitoringTool;
 
-// attach to window for index.html
-if (typeof PediatricGrowthMonitoringTool === 'function') {
-  window.PediatricGrowthMonitoringTool = PediatricGrowthMonitoringTool;
-}
+// export default removed for browser build
+window.PediatricGrowthMonitoringTool = PediatricGrowthMonitoringTool;
